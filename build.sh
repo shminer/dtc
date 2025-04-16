@@ -10,7 +10,7 @@ export CXX=$TOOLCHAIN/bin/$TARGET$API-clang++
 export LD=$TOOLCHAIN/bin/ld
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
-
+export STATIC_BUILD=1
 
 make \
   AR=$AR \
@@ -20,4 +20,5 @@ make \
   LD=$LD \
   RANLIB=$RANLIB \
   STRIP=$STRIP \
-  -j$(nproc)
+  -j$(nproc) \
+  $1
