@@ -44,7 +44,7 @@ LIBFDT_1.2 {
 		fdt_del_mem_rsv;
 		fdt_set_name;
 		fdt_setprop_namelen;
-		fdt_setprop;
+		#fdt_setprop;
 		fdt_delprop;
 		fdt_add_subnode_namelen;
 		fdt_add_subnode;
@@ -73,7 +73,7 @@ LIBFDT_1.2 {
 		fdt_generate_phandle;
 		fdt_check_full;
 		fdt_setprop_placeholder_namelen;
-		fdt_setprop_placeholder;
+		#fdt_setprop_placeholder;
 		fdt_property_placeholder;
 		fdt_header_size_;
 		fdt_appendprop_addrrange;
