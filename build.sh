@@ -11,7 +11,7 @@ export LD=$TOOLCHAIN/bin/ld
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 export STATIC_BUILD=1
-
+epxort NO_PYTHON=1
 make \
   AR=$AR \
   CC=$CC \
@@ -20,5 +20,7 @@ make \
   LD=$LD \
   RANLIB=$RANLIB \
   STRIP=$STRIP \
+  CFLAGS="-Wall -ffunction-sections -fdata-sections -static" \
+  LDFLAGS="-Wl,--gc-sections -Wl,-z,max-page-size=4096" \
   -j$(nproc) \
   $1
